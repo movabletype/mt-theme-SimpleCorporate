@@ -6,8 +6,8 @@ See below: [Simple Corporate](https://theme.movabletype.io/simplecorporate/)
 * Movable Type Pro 6.1 or later
 
 ## External Compornents
-* Bootstrap 3 (Read from [maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css](https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css))
-* Font Awesome (Read from [maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css](https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css))
+* Bootstrap 3 (from [maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css](https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css))
+* Font Awesome (from [maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css](https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css))
 
 ## Installing
 
@@ -21,7 +21,7 @@ The MIT License (MIT)
 
 ## Support
 
-See [SUPPORT.TXT](SUPPORT.txt)
+See [SUPPORT.TXT](SUPPORT.TXT)
 
 ## Copyright
 
