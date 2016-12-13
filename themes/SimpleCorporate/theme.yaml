@@ -1,0 +1,188 @@
+id: 'theme_from_simplecorporate'
+label: 'Simple corporate'
+name: 'Simple corporate'
+version: 1.0
+author_link: 'http://www.movabletype.org/'
+author_name: 'Six Apart, Ltd.'
+class: 'blog'
+description: Simple Corporate は企業サイトのようなウェブサイトを作成できるレスポンシブ Web デザインを採用したテーマです。
+protected: 1
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
+elements:
+  blog_static_files:
+    component: ~
+    data:
+      - images
+      - js
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      entry_img:
+        default: ''
+        description: ''
+        name: メイン画像
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: entry_img
+        type: image
+      entrymeta_description:
+        default: ''
+        description: ''
+        name: 記事用 meta description
+        obj_type: entry
+        options: ~
+        required: 0
+        tag: entrymeta_description
+        type: textarea
+      folder_background_image:
+        default: ''
+        description: ''
+        name: 背景画像
+        obj_type: folder
+        options: ~
+        required: 0
+        tag: folder_background_image
+        type: image
+      item_link:
+        default: ''
+        description: ''
+        name: 詳細ページへのリンク
+        obj_type: image
+        options: ~
+        required: 0
+        tag: item_link
+        type: text
+      page_excerpt:
+        default: ''
+        description: ''
+        name: 概要
+        obj_type: page
+        options: ~
+        required: 0
+        tag: page_excerpt
+        type: textarea
+      page_icon:
+        default: ''
+        description: "font awesome のクラス名を入力して下さい。（例：fa-adjust）\r\nクラス名がわからない場合は、下記チートシートからお探し下さい。\r\nhttp://fortawesome.github.io/Font-Awesome/cheatsheet/"
+        name: アイコンを設定する
+        obj_type: page
+        options: ~
+        required: 0
+        tag: page_icon
+        type: text
+      page_meta_description:
+        default: ''
+        description: ''
+        name: meta description
+        obj_type: template
+        options: ~
+        required: 0
+        tag: page_meta_description
+        type: textarea
+      webpage_meta_description:
+        default: ''
+        description: ''
+        name: ウェブページ用 meta description
+        obj_type: page
+        options: ~
+        required: 0
+        tag: webpage_meta_description
+        type: textarea
+    importer: custom_fields
+  template_set:
+    component: ~
+    data:
+      base_path: templates
+      label: exported_template set
+      templates:
+        archive:
+          category_entry_listing:
+            label: カテゴリ別記事リスト
+            mappings:
+              category:
+                archive_type: Category
+                file_template: blog/%-c/%i
+                preferred: 1
+          yearly_entry_listing:
+            label: 年別ブログ記事リスト
+            mappings:
+              yearly:
+                archive_type: Yearly
+                file_template: blog/%y/%i
+                preferred: 1
+        index:
+          feed_recent:
+            label: 最新記事のフィード
+            outfile: atom.xml
+            rebuild_me: 1
+          javascript:
+            label: JavaScript
+            outfile: mt.js
+            rebuild_me: 1
+          main_index:
+            label: ニュース TOP
+            outfile: news/index.html
+            rebuild_me: 1
+          styles:
+            label: スタイルシート
+            outfile: styles.css
+            rebuild_me: 1
+          index_page:
+            label: インデックスページ
+            outfile: index.html
+            rebuild_me: 1
+          common_js:
+            label: common.js
+            outfile: common.js
+            rebuild_me: 1
+        individual:
+          entry:
+            label: 記事
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: blog/%y/%m/%-f
+                preferred: 1
+        module:
+          header:
+            label: header
+          blog_sidemenu:
+            label: blog-sidemenu
+          entry_list:
+            label: entry-list
+          config:
+            label: config
+          common_stylesheet:
+            label: common_stylesheet
+          common_head_js:
+            label: common_head_js
+          common_bottom_js:
+            label: common_bottom_js
+          footer:
+            label: footer
+        page:
+          page:
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system:
+          comment_listing:
+            label: コメント一覧
+          comment_preview:
+            label: コメントプレビュー
+          comment_response:
+            label: コメント完了
+          dynamic_error:
+            label: ダイナミックパブリッシングエラー
+          popup_image:
+            label: ポップアップ画像
+          search_results:
+            label: 検索結果
+    importer: template_set

@@ -1,0 +1,86 @@
+<!DOCTYPE html><mt:include module="config">
+<html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:publishcharset>">
+<title><mt:pagetitle> <mt:if tag="pagefolder">| <mt:pagefolder><mt:FolderLabel></mt:PageFolder> </mt:if>| <mt:blogname encode_html="1"></title>
+<meta name="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta name="keywords" content="<mt:getvar name="metakeywords"><mt:pagekeywords>">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
+<link rel="start" href="<mt:blogurl encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:link template="feed_recent">">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
+<meta property="og:title" content="<mt:pagetitle> <mt:if tag="pagefolder">| <mt:pagefolder><mt:FolderLabel></mt:PageFolder> </mt:if>| <mt:blogname encode_html="1">">
+<meta property="og:url" content="<mt:pagepermalink encode_html="1">">
+<meta property="og:description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta property="og:site_name" content="<mt:blogname encode_html="1">">
+<meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<link itemprop="url" href="<mt:pagepermalink encode_html="1">">
+<link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<mt:include module="common_stylesheet">
+<mt:include module="common_head_js">
+</head>
+
+<body id="top">
+
+<mt:setvarblock name="thisfloder"><mt:PageFolder><mt:FolderLabel></mt:PageFolder></mt:setvarblock>
+<mt:setvarblock name="thispage"><mt:pagetitle></mt:setvarblock>
+
+<mt:include module="header">
+
+<section id="localnavi">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav role="navigation" class="breadcrumb">
+          <ul class="clearfix">
+            <li class="home"><a href="<mt:blogrelativeurl>"><i class="fa fa-home fa-lg"></i></a></li>
+            <mt:if name="thisfloder">
+            <li class="pagetop">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><mt:PageFolder><mt:FolderLabel></mt:PageFolder><i class="fa fa-caret-down fa-sm"></i></a>
+              <ul class="dropdown-menu">
+              <mt:pages folder="$thisfloder">
+              <mt:setvarblock name="pagetitle"><mt:pagetitle></mt:setvarblock>
+                <li<mt:if name="thispage" eq="$pagetitle"> class="active"</mt:if>><a href="<mt:pagepermalink>"><mt:pagetitle></a></li>
+              </mt:pages>
+              </ul>
+            </li>
+            </mt:if>
+            <li><span><mt:pagetitle></span></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>
+</section>
+
+<section id="mainvisual-lower">
+  <div class="overray"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2><i class="fa<mt:if tag="page_icon"> <mt:page_icon></mt:if>"></i><mt:pagetitle></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="content">
+  <article id="webpage-body">
+    <div class="container">
+      <mt:pagebody>
+    </div>
+  </article>
+</div>
+
+<mt:include module="footer">
+
+<mt:include module="common_bottom_js">
+  
+</body>
+</html>

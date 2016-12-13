@@ -1,0 +1,103 @@
+<!DOCTYPE html><mt:include module="config">
+<html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:publishcharset>">
+<title><mt:blogname encode_html="1"></title>
+<meta name="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta name="keywords" content="<mt:getvar name="metakeywords">">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
+<link rel="start" href="<mt:blogurl encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:link template="feed_recent">">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
+<meta property="og:title" content="<mt:blogname encode_html="1">">
+<meta property="og:url" content="<mt:blogurl encode_html="1">">
+<meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta property="og:site_name" content="<mt:blogname encode_html="1">">
+<meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<link itemprop="url" href="<mt:blogurl encode_html="1">">
+<link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<mt:include module="common_stylesheet">
+<mt:include module="common_head_js">
+</head>
+
+<mt:setvarblock name="thispage">TOP</mt:setvarblock>
+
+<body id="sitetop">
+
+<mt:include module="header">
+
+<section id="mainvisual">
+  <div class="container">
+    <h2><img src="/movabletype/simplecorporate/asstes/images/main-img.png" alt=""></h2>
+    <p id="main-text">
+    <mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:assetdescription></mt:assets>
+    </p>
+    <div class="btn-group">
+      <mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:if tag="item_link"><a href="<mt:item_link>" class="btn btn-primary btn-lg">詳細はこちら</a></mt:if></mt:assets>
+    </div>
+  </div>
+</section>
+
+<section id="top-about">
+
+<mt:TopLevelFolders>
+  <mt:setvarblock name="description"><mt:folderdescription></mt:setvarblock>
+  <mt:unless name="description" eq="footer_link">
+  <section class="webpages">
+    <div class="container">
+      <h3><mt:FolderLabel></h3>
+      <p class="webpage-lead"><mt:folderdescription></p>
+      <mt:pages>
+      <mt:If name="__counter__" op="%" value="4" eq="1"><div class="row"></mt:If>
+        <div class="col-sm-4">
+          <h4><i class="fa fa-lg<mt:if tag="page_icon"> <mt:page_icon></mt:if>"></i><mt:pagetitle></h4>
+          <p><mt:page_excerpt></p>
+          <p class="page-detail"><a href="<mt:pagepermalink>" class="btn btn-primary">詳細を見る</a></p>
+        </div>
+      <mt:If name="__counter__" op="%" value="4" eq="0"></div></mt:If>
+      <mt:If name="__last__"><mt:If name="__counter__" op="%" value="4" ne="0"></div></mt:If></mt:If>
+      </mt:pages>
+    </div>
+  </section>
+  </mt:unless>
+</mt:TopLevelFolders>
+
+</section>
+
+<section id="top-news">
+  <div class="container">
+    <h3>最新ニュース</h3>
+    <div class="row">
+    <mt:entries lastn="4">
+      <a href="<mt:entrypermalink>" class="col-sm-3">
+        <mt:setvarblock name="entryfigure"><mt:if tag="entry_img"><mt:entry_imgasset><mt:assetthumbnailurl></mt:entry_imgasset><mt:else><mt:entrybody regex_replace="/<[^i].*?>|<i[^m]*?>|<iframe.*?>|<input.*?>|<ins.*?>|<isindex.*?>|\s/g","" regex_replace='/(.*?src=")(.*?)(".*)/g','$2' regex_replace='/^[^\.\/h].*/g',''></mt:if></mt:setvarblock>
+        <figure<mt:unless name="entryfigure"> class="noimage"</mt:unless>><mt:if name="entryfigure"><mt:if tag="entry_img"><mt:entry_imgasset><img src="<mt:assetthumbnailurl width="300">" alt="<mt:entrytitle>"></mt:entry_imgasset><mt:else><img src="<mt:entrybody regex_replace="/<[^i].*?>|<i[^m]*?>|<iframe.*?>|<input.*?>|<ins.*?>|<isindex.*?>|\s/g","" regex_replace='/(.*?src=")(.*?)(".*)/g','$2' regex_replace='/^[^\.\/h].*/g',''>"></mt:if></mt:if><mt:unless name="entryfigure"><span>No image</span></mt:unless></figure>
+        <div class="entry-detail">
+          <h1><mt:entrytitle></h1>
+          <p class="entry-excerpt"><mt:entryexcerpt></p>
+        </div>
+      </a>
+    </mt:entries>
+    </div>
+  </div>
+</section>
+
+<mt:include module="footer">
+
+<mt:include module="common_bottom_js">
+<script src="<mt:blogrelativeurl>js/jquery.tile.min.js"></script>
+<script type="application/javascript">
+$(window).load(function(){
+    $('#top-news .col-sm-3').tile(4);
+    $('.webpages .col-sm-4').tile(3);
+});
+</script>
+  
+</body>
+</html>

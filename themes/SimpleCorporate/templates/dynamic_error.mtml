@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="<$mt:BlogLanguage$>">
+  <head>
+    <meta charset="<$mt:PublishCharset$>">
+    <title><$mt:BlogName encode_html="1"$>: ページが見つかりません。</title>
+    <$mt:Include module="HTMLヘッダー"$>
+  </head>
+  <body>
+    <header role="banner">
+      <$mt:Include module="バナーヘッダー"$>
+      <$mt:Include module="ナビゲーション"$>
+    </header>
+    <div class="content">
+      <div role="main">
+        <section>
+          <h2>ページが見つかりません。</h2>
+          <pre><$mt:ErrorMessage$></pre>
+        </section>
+      </div>
+      <div class="related">
+        <$mt:WidgetSet name="関連コンテンツ (インデックス)"$>
+      </div>
+    </div>
+    <footer role="contentinfo">
+      <$mt:Include module="バナーフッター"$>
+    </footer>
+    <script src="<$mt:StaticWebPath encode_html="1"$>jquery/jquery.min.js"></script>
+    <script src="<$mt:Link template="javascript_theme" encode_html="1">"></script>
+  </body>
+</html>

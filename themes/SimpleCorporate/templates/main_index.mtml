@@ -1,0 +1,81 @@
+<!DOCTYPE html><mt:include module="config">
+<html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:publishcharset>">
+<title>ニュース | <mt:blogname encode_html="1"></title>
+<meta name="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:BlogDescription remove_html="1" encede_html="1"></mt:if>">
+<meta name="keywords" content="<mt:getvar name="metakeywords">">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
+<link rel="start" href="<mt:blogurl encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<mt:link template="feed_recent">">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
+<meta property="og:title" content="ニュース | <mt:blogname encode_html="1">">
+<meta property="og:url" content="<mt:blogurl encode_html="1">blog/">
+<meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:BlogDescription remove_html="1" encede_html="1"></mt:if>">
+<meta property="og:site_name" content="<mt:blogname encode_html="1">">
+<meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description><mt:BlogDescription remove_html="1" encede_html="1"></mt:if>">
+<link itemprop="url" href="<mt:blogurl encode_html="1">blog/">
+<link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<mt:include module="common_stylesheet">
+<mt:include module="common_head_js">
+</head>
+<body id="top">
+
+<mt:setvarblock name="thispage">blog</mt:setvarblock>
+
+<mt:include module="header">
+
+<section id="localnavi">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav role="navigation" class="breadcrumb">
+          <ul class="clearfix">
+            <li class="home"><a href="<mt:blogrelativeurl>"><i class="fa fa-home fa-lg"></i></a></li>
+            <li><span>ニュース</span></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>
+</section>
+
+<section id="mainvisual-lower">
+  <div class="overray"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2><i class="fa fa-book"></i>ニュース</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="content">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col-sm-9" id="blog-primary-content">
+        <div id="entry-list">
+<mt:include module="entry-list">
+        </div>
+        <div class="holder"></div>
+      </div><!-- /primary-content -->
+      <aside class="col-sm-3 pull-right" id="sidebar">
+<mt:include module="blog-sidemenu">
+      </aside><!-- sidebar -->
+    </div>
+  </div>
+</div>
+
+<mt:include module="footer">
+
+<mt:include module="common_bottom_js">
+  
+</body>
+</html>

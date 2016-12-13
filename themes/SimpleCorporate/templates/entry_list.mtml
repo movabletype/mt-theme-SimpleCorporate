@@ -1,0 +1,18 @@
+        <mt:entries>
+          <article class="entry clearfix">
+            <mt:if tag="entry_img">
+            <figure><mt:entry_imgasset><img src="<mt:assetthumbnailurl width="300">"></mt:entry_imgasset></figure>
+            </mt:if>
+            <div class="entry-meta">
+              <time datetime="<mt:entrydate format="%Y-%m-%d">"><span class="year"><mt:entrydate format="%Y">年</span><span class="monthday"><mt:entrydate format="%b月%e日"></span></time>
+              <mt:entrycategories type="primary"><a href="<mt:categoryarchivelink>" class="category"><mt:categorylabel></a></mt:entrycategories>
+            </div>
+            <h1 class="entrytitle"><a href="<mt:entrypermalink>"><mt:entrytitle></a></h1>
+            <div class="entry-excerpt">
+              <mt:entryexcerpt>
+            </div>
+            <div class="pagemore">
+              <a href="<mt:entrypermalink>" class="btn btn-primary">この記事の詳細を見る</a>
+            </div>
+          </article><!-- /.entry -->
+        </mt:entries>

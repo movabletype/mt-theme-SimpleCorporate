@@ -1,0 +1,34 @@
+        <nav class="side-nav">
+          <h1>最新記事</h1>
+          <ul>
+          <mt:entries lastn="5">
+            <li><a href="<mt:entrypermalink>"><mt:entrytitle></a></li>
+          </mt:entries>
+          </ul>
+        </nav>
+        <nav class="side-nav">
+          <h1>カテゴリ</h1>
+          <mt:TopLevelCategories>
+            <mt:SubCatIsFirst>
+          <ul>
+            </mt:SubCatIsFirst>
+            <mt:If tag="CategoryCount">
+            <li><a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>><$mt:CategoryLabel$> (<$mt:CategoryCount$>)</a>
+            <mt:Else>
+            <li><$mt:CategoryLabel$>
+            </mt:If>
+            <$mt:SubCatsRecurse$>
+            </li>
+            <mt:SubCatIsLast>
+          </ul>
+            </mt:SubCatIsLast>
+          </mt:TopLevelCategories>
+        </nav>
+        <nav class="side-nav">
+          <h1>年別アーカイブ</h1>
+          <ul>
+          <mt:archivelist archive_type="Yearly">
+            <li><a href="<mt:archivelink>"><mt:archivetitle></a></li>
+          </mt:archivelist>
+          </ul>
+        </nav>
