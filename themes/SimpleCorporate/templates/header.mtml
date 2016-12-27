@@ -1,8 +1,8 @@
 <header class="navbar">
   <div class="container">
     <h1 class="navbar-header">
-      <mt:if name="site-logo"><mt:assets tag="@SITE_LOGO" limit="1"><mt:assetthumbnailurl></mt:assets></mt:if>
-      <a href="<mt:blogrelativeurl>" class="brand"><mt:if name="site-logo"><mt:assets type="image" tag="@SITE_LOGO" limit="1"><img src="<mt:assetthumbnailurl>" alt="<mt:blogname>"></mt:assets><mt:else><img src="<mt:blogrelativeurl>images/logo.png"></mt:if></a>
+      <mt:setvarblock name="site-logo"><mt:assets tag="@SITE_LOGO" limit="1"><mt:asseturl></mt:assets></mt:setvarblock>
+      <a href="<mt:blogrelativeurl>" class="brand"><mt:if name="site-logo"><mt:assets type="image" tag="@SITE_LOGO" limit="1"><img src="<mt:asseturl>" alt="<mt:blogname>"></mt:assets><mt:else><img src="<mt:blogrelativeurl>images/logo.png"></mt:if></a>
       <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button"><i class="fa fa-list"></i></button>
     </h1>
     <nav class="navbar-collapse collapse navbar-right">

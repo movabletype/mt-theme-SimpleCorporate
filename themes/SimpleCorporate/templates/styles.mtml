@@ -86,8 +86,9 @@ color: #111;
 }
 
 .dropdown-menu {
+max-height: 400px;
 padding: 0;
-overflow: hidden;
+overflow: auto;
 }
 
 .dropdown-menu > li > a {
@@ -187,12 +188,12 @@ margin-bottom: 1em;
                  LOWER CONTENT
 ------------------------------------------ */
 
-<mt:if name="main-bg"><mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:assetthumbnailurl></mt:assets></mt:if>
+<mt:setvarblock name="main-bg"><mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:assetthumbnailurl></mt:assets></mt:setvarblock>
 
 #mainvisual-lower {
 position: relative;
 padding: 3.5em 0;
-background: url(<mt:if name="main-bg"><mt:assets type="image" tag="@MAIN_BACKGROUND" limit="1"><mt:assetthumbnailurl></mt:assets><mt:else><mt:blogrelativeurl>/images/bg-top-main.png</mt:if>) no-repeat center bottom;
+background: url(<mt:if name="main-bg"><mt:assets type="image" tag="@MAIN_BACKGROUND" limit="1"><mt:assetthumbnailurl></mt:assets><mt:else><mt:blogrelativeurl>images/bg-top-main.png</mt:if>) no-repeat center bottom;
 background-size: cover;
 color: #fff;
 text-shadow: 0 1px 0px #000;
@@ -523,7 +524,7 @@ padding-top: 0;
 width: 100%;
 min-height: 300px;
 padding: 8em 0 3em 0;
-background: url(<mt:if name="main-bg"><mt:assets type="image" tag="@MAIN_BACKGROUND" limit="1"><mt:assetthumbnailurl></mt:assets><mt:else><mt:blogrelativeurl>/images/bg-top-main.png</mt:if>) no-repeat center bottom;
+background: url(<mt:if name="main-bg"><mt:assets type="image" tag="@MAIN_BACKGROUND" limit="1"><mt:asseturl></mt:assets><mt:else><mt:blogrelativeurl>images/bg-top-main.png</mt:if>) no-repeat center bottom;
 background-size: cover;
 text-align: center;
 border-bottom: solid 1px #e9e9e9;
@@ -755,6 +756,10 @@ background: #f6f6f6;
 
 #entry-list figure {
 width: 40%;
+}
+
+.dropdown-menu {
+max-height: 200px;
 }
 
 }
