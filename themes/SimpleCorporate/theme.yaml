@@ -1,13 +1,17 @@
----
-author_link: ''
-class: website
-description: ''
-elements:
+author_link: 'http://www.movabletype.org/'
+author_name: 'Six Apart, Ltd.'
+class: 'blog'
+description: Simple Corporate は企業サイトのようなウェブサイトを作成できるレスポンシブ Web デザインを採用したテーマです。
+protected: 1
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
+elements: 
   blog_static_files:
     component: ~
     data:
-      - images
       - js
+      - images
     importer: blog_static_files
   custom_fields:
     component: commercial
@@ -171,28 +175,7 @@ elements:
           search_results:
             label: 検索結果
     importer: template_set
-id: theme_from_simplecorporate
-label: 'Simple corporate'
-name: 'Simple corporate'
-version: '1.01'
-type: Page
-                file_template: '%-c/%-f'
-                preferred: '1'
-        system:
-          comment_listing:
-            label: コメント一覧
-          comment_preview:
-            label: コメントプレビュー
-          comment_response:
-            label: コメント完了
-          dynamic_error:
-            label: ダイナミックパブリッシングエラー
-          popup_image:
-            label: ポップアップ画像
-          search_results:
-            label: 検索結果
-    importer: template_set
-id: theme_from_simplecorporate
-label: 'Simple corporate'
-name: 'Simple corporate'
+id: simplecorporate
+label: 'Simple Corporate'
+name: 'Simple Corporate'
 version: '1.01'
