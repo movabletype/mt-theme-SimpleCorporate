@@ -3,7 +3,7 @@
 <head>
 <meta charset="<mt:publishcharset>">
 <title><mt:entrytitle> | <mt:blogname encode_html="1"></title>
-<meta name="description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta name="description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <meta name="keywords" content="<mt:getvar name="metakeywords"><mt:entrykeywords>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
@@ -15,11 +15,11 @@
 <meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
 <meta property="og:title" content="<mt:entrytitle> | <mt:blogname encode_html="1">">
 <meta property="og:url" content="<mt:entrypermalink encode_html="1">">
-<meta property="og:description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta property="og:description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <meta property="og:site_name" content="<mt:blogname encode_html="1">">
 <meta property="og:image" content="<mt:if tag="entry_img"><mt:entry_imgasset><mt:assetthumbnailurl></mt:entry_imgasset><mt:else><mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets></mt:if>">
 <!-- Microdata -->
-<meta itemprop="description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta itemprop="description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <link itemprop="url" href="<mt:entrypermalink encode_html="1">">
 <link itemprop="image" href="<mt:if tag="entry_img"><mt:entry_imgasset><mt:assetthumbnailurl></mt:entry_imgasset><mt:else><mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets></mt:if>">
 <mt:include module="common_stylesheet">
@@ -66,7 +66,7 @@
         <article id="entry-detail">
           <div class="entry-meta">
             <time datetime="<mt:entrydate format="%Y-%m-%d">"><span class="year"><mt:entrydate format="%Y">年</span><span class="monthday"><mt:entrydate format="%b月%e日"></span></time>
-            <mt:entrycategories type="primary"><a href="<mt:categoryarchivelink>" class="category"><mt:categorylabel></a></mt:entrycategories>
+            <mt:entrycategories><a href="<mt:categoryarchivelink>" class="category"><mt:categorylabel></a></mt:entrycategories>
           </div>
           <h1 class="entrytitle"><mt:entrytitle></h1>
           <div id="entry-body">
