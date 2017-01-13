@@ -175,14 +175,3 @@ id: simplecorporate
 label: 'Simple Corporate'
 name: 'Simple Corporate'
 version: '1.01'
-    dynamic_error:
-            label: ダイナミックパブリッシングエラー
-          popup_image:
-            label: ポップアップ画像
-          search_results:
-            label: 検索結果
-    importer: template_set
-id: simplecorporate
-label: 'Simple Corporate'
-name: 'Simple Corporate'
-version: '1.01'
