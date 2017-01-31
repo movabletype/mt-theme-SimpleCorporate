@@ -1,4 +1,5 @@
-<!DOCTYPE html><mt:include module="config">
+<mt:include module="config">
+<!DOCTYPE html>
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="<mt:publishcharset>">
@@ -57,7 +58,7 @@
       <mt:If name="__counter__" op="%" value="3" eq="1"><div class="row"></mt:If>
         <div class="col-sm-4">
           <h4><i class="fa fa-lg<mt:if tag="page_icon"> <mt:page_icon></mt:if>"></i><mt:pagetitle></h4>
-          <p><mt:page_excerpt></p>
+          <p><mt:if tag="pageexcerpt"><mt:pageexcerpt trim_to="40+..."><mt:else><mt:pagebody remove_html="1" trim_to="40+..."></mt:if></p>
           <p class="page-detail"><a href="<mt:pagepermalink>" class="btn btn-primary">詳細を見る</a></p>
         </div>
       <mt:If name="__counter__" op="%" value="3" eq="0"></div></mt:If>
@@ -80,7 +81,7 @@
         <figure<mt:unless name="entryfigure"> class="noimage"</mt:unless>><mt:if name="entryfigure"><mt:if tag="entry_img"><mt:entry_imgasset><img src="<mt:assetthumbnailurl width="300">" alt="<mt:entrytitle>"></mt:entry_imgasset><mt:else><img src="<mt:entrybody regex_replace="/<[^i].*?>|<i[^m]*?>|<iframe.*?>|<input.*?>|<ins.*?>|<isindex.*?>|\s/g","" regex_replace='/(.*?src=")(.*?)(".*)/g','$2' regex_replace='/^[^\.\/h].*/g',''>"></mt:if></mt:if><mt:unless name="entryfigure"><span>No image</span></mt:unless></figure>
         <div class="entry-detail">
           <h1><mt:entrytitle></h1>
-          <p class="entry-excerpt"><mt:entryexcerpt></p>
+          <p class="entry-excerpt"><mt:if tag="entryexcerpt"><mt:entryexcerpt trim_to="40+..."><mt:else><mt:entrybody remove_html="1" trim_to="40+..."></mt:if></p>
         </div>
       </a>
     </mt:entries>
@@ -94,9 +95,26 @@
 <script src="<mt:blogrelativeurl>js/jquery.tile.min.js"></script>
 <script type="application/javascript">
 $(window).load(function(){
-    $('#top-news .col-sm-3').tile(4);
-    $('.webpages .col-sm-4').tile(3);
-});
+    var maxWidth = 768;
+    if (maxWidth <= $(this).width()) {
+      $('.webpages .col-sm-4').tile(3);
+      $('#top-news .col-sm-3').tile(4);
+      $(window).load(function() {
+        $('.webpages .col-sm-4').tile(3);
+        $('#top-news .col-sm-3').tile(4);
+      });
+	}
+    $(window).resize(function(){
+        if (maxWidth <= $(this).width()) {
+            $('.webpages .col-sm-4').tile(3);
+    		$('#top-news .col-sm-3').tile(4);
+        }
+        else {
+            $('.webpages .col-sm-4').removeAttr('style');
+            $('#top-news .col-sm-3').removeAttr('style');
+        }
+    });
+  });
 </script>
   
 </body>
