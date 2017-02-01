@@ -4,7 +4,7 @@
 <head>
 <meta charset="<mt:publishcharset>">
 <title><mt:pagetitle> <mt:if tag="pagefolder">| <mt:pagefolder><mt:FolderLabel></mt:PageFolder> </mt:if>| <mt:blogname encode_html="1"></title>
-<meta name="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta name="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:pagebody remove_html="1" encede_html="1" trim_to="120+..."></mt:if>">
 <meta name="keywords" content="<mt:getvar name="metakeywords"><mt:pagekeywords>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
@@ -16,11 +16,11 @@
 <meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
 <meta property="og:title" content="<mt:pagetitle> <mt:if tag="pagefolder">| <mt:pagefolder><mt:FolderLabel></mt:PageFolder> </mt:if>| <mt:blogname encode_html="1">">
 <meta property="og:url" content="<mt:pagepermalink encode_html="1">">
-<meta property="og:description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta property="og:description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:pagebody remove_html="1" encede_html="1" trim_to="120+..."></mt:if>">
 <meta property="og:site_name" content="<mt:blogname encode_html="1">">
 <meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
 <!-- Microdata -->
-<meta itemprop="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
+<meta itemprop="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:pagebody remove_html="1" encede_html="1" trim_to="120+..."></mt:if>">
 <link itemprop="url" href="<mt:pagepermalink encode_html="1">">
 <link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
 <mt:include module="common_stylesheet">
