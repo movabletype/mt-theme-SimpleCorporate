@@ -5,7 +5,7 @@
         <p id="copyright">&copy;Six Apart Ltd.</p>
       </div>
       <nav class="col-sm-6" id="footer-navi" role="navigation">
-        <ul class="pull-right">
+        <ul>
         <mt:toplevelfolders>
         <mt:setvarblock name="description"><mt:folderdescription></mt:setvarblock>
         <mt:if name="description" eq="footer_link">
@@ -15,6 +15,7 @@
         </mt:if>
         </mt:toplevelfolders>
         </ul>
+        <mt:BlogIfCCLicense><p class="license">このブログは<a rel="license" href="<$mt:BlogCCLicenseURL$>">クリエイティブ・コモンズ</a>でライセンスされています。</p></mt:BlogIfCCLicense>
       </nav>
     </div>
   </div>
