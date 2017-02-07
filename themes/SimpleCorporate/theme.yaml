@@ -39,15 +39,6 @@ elements:
         required: '0'
         tag: item_link
         type: text
-      page_excerpt:
-        default: ''
-        description: ''
-        name: 概要
-        obj_type: page
-        options: ~
-        required: '0'
-        tag: page_excerpt
-        type: textarea
       page_icon:
         default: ''
         description: "font awesome のクラス名を入力して下さい。（例：fa-adjust）\r\nクラス名がわからない場合は、下記チートシートからお探し下さい。\r\nhttp://fortawesome.github.io/Font-Awesome/cheatsheet/"
