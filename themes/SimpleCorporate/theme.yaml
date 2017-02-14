@@ -4,6 +4,9 @@ author_name: 'Six Apart, Ltd.'
 class: 'blog'
 description: Simple Corporate は企業サイトのようなウェブサイトを作成できるレスポンシブ Web デザインを採用したテーマです。
 protected: 1
+#l10n_lexicon:
+#  en_us: l10n_en_us.yaml
+#  ja: l10n_ja.yaml
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thumb-small.png'
@@ -46,7 +49,7 @@ elements:
         type: text
       page_icon:
         default: ''
-        description: "font awesome のクラス名を入力して下さい。（例：fa-adjust）\r\nクラス名がわからない場合は、下記チートシートからお探し下さい。\r\nhttp://fortawesome.github.io/Font-Awesome/cheatsheet/"
+        description: "font awesome のクラス名を入力して下さい。（例：fa-adjust）\r\nクラス名がわからない場合は、下記チートシートからお探し下さい。\r\vnhttp://fortawesome.github.io/Font-Awesome/cheatsheet/"
         name: アイコンを設定する
         obj_type: page
         options: ~
