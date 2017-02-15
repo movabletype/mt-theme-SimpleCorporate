@@ -3,9 +3,9 @@
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="<mt:publishcharset>">
-<title><mt:archivetitle> | ニュース | <mt:blogname encode_html="1"></title>
-<meta name="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogname>のニュース。<mt:archivetitle>のアーカイブページです。</mt:if>">
-<meta name="keywords" content="<mt:getvar name="metakeywords">ニュース,<mt:archivetitle>">
+<title><mt:archivetitle> | <__trans phrase="News"> | <mt:blogname encode_html="1"></title>
+<meta name="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><__trans phrase="This page is an archive of news in [_1] from [_2]." params="<mt:archivetitle>%%<mt:blogname>"></mt:if>">
+<meta name="keywords" content="<mt:getvar name="metakeywords"><__trans phrase="News">,<mt:archivetitle>">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <mt:assets tag="@SITE_FAVICON" limit="1"><link rel="shortcut icon" href="<mt:asseturl encode_html="1">"></mt:assets>
 <link rel="start" href="<mt:blogurl encode_html="1">">
@@ -14,13 +14,13 @@
 <!-- Open Graph Protocol -->
 <meta property="og:type" content="article">
 <meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
-<meta property="og:title" content="<mt:archivetitle> | ニュース | <mt:blogname encode_html="1">">
+<meta property="og:title" content="<mt:archivetitle> | <__trans phrase="News"> | <mt:blogname encode_html="1">">
 <meta property="og:url" content="<mt:archivelink encode_html="1">">
-<meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogname>のニュース。<mt:archivetitle>のアーカイブページです。</mt:if>">
+<meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><__trans phrase="This page is an archive of news in [_1] from [_2]." params="<mt:archivetitle>%%<mt:blogname>"></mt:if>">
 <meta property="og:site_name" content="<mt:blogname encode_html="1">">
 <meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
 <!-- Microdata -->
-<meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogname>のニュース。<mt:archivetitle>のアーカイブページです。</mt:if>">
+<meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><__trans phrase="This page is an archive of news in [_1] from [_2]." params="<mt:archivetitle>%%<mt:blogname>"></mt:if>">
 <link itemprop="url" href="<mt:archivelink encode_html="1">">
 <link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
 <mt:include module="common_stylesheet">
@@ -40,7 +40,7 @@
         <nav role="navigation" class="breadcrumb">
           <ul class="clearfix">
             <li class="home"><a href="<mt:blogrelativeurl>"><i class="fa fa-home fa-lg"></i></a></li>
-            <li><a href="<mt:blogrelativeurl>news/">ニュース</a></li>
+            <li><a href="<mt:blogrelativeurl>news/"><__trans phrase="News"></a></li>
             <li><span><mt:archivetitle></span></li>
           </ul>
         </nav>
@@ -54,7 +54,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h2><i class="fa fa-book"></i>ニュース</h2>
+        <h2><i class="fa fa-book"></i><__trans phrase="News"></h2>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
   <div class="container">
     <div class="row-fluid">
       <div class="col-sm-9" id="blog-primary-content">
-        <h1 class="page-title"><mt:archivetitle>アーカイブ</h1>
+        <h1 class="page-title"><__trans phrase="Archive for [_1]" params="<mt:archivetitle>"></h1>
         <div id="entry-list">
 <mt:include module="entry-list">
         </div>

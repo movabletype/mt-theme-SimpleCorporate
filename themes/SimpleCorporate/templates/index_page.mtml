@@ -40,7 +40,7 @@
     <mt:setvarblock name="maintext"><mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:assetdescription></mt:assets></mt:setvarblock>
     <mt:if name="maintext"><p id="main-text"><mt:var name="maintext"></p></mt:if>
     <div class="btn-group">
-      <mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:if tag="item_link"><a href="<mt:item_link>" class="btn btn-primary btn-lg">詳細はこちら</a></mt:if></mt:assets>
+      <mt:assets tag="@MAIN_BACKGROUND" limit="1"><mt:if tag="item_link"><a href="<mt:item_link>" class="btn btn-primary btn-lg"><__trans phrase="Learn More"></a></mt:if></mt:assets>
     </div>
   </div>
 </section>
@@ -59,7 +59,7 @@
         <div class="col-sm-4">
           <h4><i class="fa fa-lg<mt:if tag="page_icon"> <mt:page_icon></mt:if>"></i><mt:pagetitle></h4>
           <p><mt:if tag="pageexcerpt"><mt:pageexcerpt trim_to="40+..."><mt:else><mt:pagebody remove_html="1" trim_to="40+..."></mt:if></p>
-          <p class="page-detail"><a href="<mt:pagepermalink>" class="btn btn-primary">詳細を見る</a></p>
+          <p class="page-detail"><a href="<mt:pagepermalink>" class="btn btn-primary"><__trans phrase="Learn more"></a></p>
         </div>
       <mt:If name="__counter__" op="%" value="3" eq="0"></div></mt:If>
       <mt:If name="__last__"><mt:If name="__counter__" op="%" value="3" ne="0"></div></mt:If></mt:If>
@@ -73,7 +73,7 @@
 
 <section id="top-news">
   <div class="container">
-    <h3>最新ニュース</h3>
+    <h3><__trans phrase="Recent News"></h3>
     <div class="row">
     <mt:entries lastn="4">
       <a href="<mt:entrypermalink>" class="col-sm-3">

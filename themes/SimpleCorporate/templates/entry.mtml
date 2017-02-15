@@ -40,7 +40,7 @@
         <nav role="navigation" class="breadcrumb">
           <ul class="clearfix">
             <li class="home"><a href="<mt:blogrelativeurl>"><i class="fa fa-home fa-lg"></i></a></li>
-            <li><a href="<mt:blogrelativeurl>news/">ニュース</a></li>
+            <li><a href="<mt:blogrelativeurl>news/"><__trans phrase="News"></a></li>
             <li><span><mt:entrytitle></span></li>
           </ul>
         </nav>
@@ -54,7 +54,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h2><i class="fa fa-book"></i>ニュース</h2>
+        <h2><i class="fa fa-book"></i><__trans phrase="News"></h2>
       </div>
     </div>
   </div>
@@ -66,7 +66,7 @@
       <div class="col-sm-9" id="blog-primary-content">
         <article id="entry-detail">
           <div class="entry-meta">
-            <time datetime="<mt:entrydate format="%Y-%m-%d">"><span class="year"><mt:entrydate format="%Y">年</span><span class="monthday"><mt:entrydate format="%b月%e日"></span></time>
+            <time datetime="<mt:EntryDate format_name="iso8601">"><__trans phrase="<span class="year">[_1]</span><span class="monthday">[_2]" params="<mt:entrydate format="%Y">%%<mt:entrydate format="%b %e">"></span></time>
             <mt:entrycategories><a href="<mt:categoryarchivelink>" class="category"><mt:categorylabel></a></mt:entrycategories>
           </div>
           <h1 class="entrytitle"><mt:entrytitle></h1>
