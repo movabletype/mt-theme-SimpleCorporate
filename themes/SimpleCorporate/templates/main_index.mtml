@@ -3,7 +3,7 @@
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
 <meta charset="<mt:publishcharset>">
-<title>ニュース | <mt:blogname encode_html="1"></title>
+<title><__trans phrase="News"> | <mt:blogname encode_html="1"></title>
 <meta name="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <meta name="keywords" content="<mt:getvar name="metakeywords">">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,7 +14,7 @@
 <!-- Open Graph Protocol -->
 <meta property="og:type" content="article">
 <meta property="og:locale" content="<mt:blogLanguage setvar="blog_lang"><mt:if name="blog_lang" eq="ja">ja_JP<mt:else><mt:Var name="blog_lang"></mt:if>">
-<meta property="og:title" content="ニュース | <mt:blogname encode_html="1">">
+<meta property="og:title" content="<__trans phrase="News"> | <mt:blogname encode_html="1">">
 <meta property="og:url" content="<mt:blogurl encode_html="1">news/">
 <meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <meta property="og:site_name" content="<mt:blogname encode_html="1">">
@@ -39,7 +39,7 @@
         <nav role="navigation" class="breadcrumb">
           <ul class="clearfix">
             <li class="home"><a href="<mt:blogrelativeurl>"><i class="fa fa-home fa-lg"></i></a></li>
-            <li><span>ニュース</span></li>
+            <li><span><__trans phrase="News"></span></li>
           </ul>
         </nav>
       </div>
@@ -52,7 +52,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h2><i class="fa fa-book"></i>ニュース</h2>
+        <h2><i class="fa fa-book"></i><__trans phrase="News"></h2>
       </div>
     </div>
   </div>

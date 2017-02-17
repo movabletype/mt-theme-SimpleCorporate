@@ -1,3 +1,4 @@
+<mt:SetVarBlock name="copyright_text">&copy; Copyright <$mt:Date format="%Y"$>.</mt:SetVarBlock>
 <footer>
   <div class="container">
     <div class="row">
@@ -15,7 +16,7 @@
         </mt:if>
         </mt:toplevelfolders>
         </ul>
-        <mt:BlogIfCCLicense><p class="license">このブログは<a rel="license" href="<$mt:BlogCCLicenseURL$>">クリエイティブ・コモンズ</a>でライセンスされています。</p></mt:BlogIfCCLicense>
+        <mt:BlogIfCCLicense><__trans phrase="This blog is licensed under a <a rel="license" href="[_1]">Creative Commons License</a>." params="<$mt:BlogCCLicenseURL$>"><mt:Else><$mt:Var name="copyright_text"$></mt:BlogIfCCLicense>
       </nav>
     </div>
   </div>

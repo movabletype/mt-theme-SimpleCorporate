@@ -2,8 +2,11 @@
 author_link: 'http://www.movabletype.org/'
 author_name: 'Six Apart, Ltd.'
 class: 'blog'
-description: Simple Corporate は企業サイトのようなウェブサイトを作成できるレスポンシブ Web デザインを採用したテーマです。
+description: "'Simple Corporate' is a customizable Responsive Web Design theme, designed for corporate web sites."
 protected: 1
+#l10n_lexicon:
+#  en_us: l10n_en_us.yaml
+#  ja: l10n_ja.yaml
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thumb-small.png'
@@ -20,7 +23,7 @@ elements:
       entry_img:
         default: ''
         description: ''
-        name: メイン画像
+        name: Main image
         obj_type: entry
         options: ~
         required: '0'
@@ -29,7 +32,7 @@ elements:
       entrymeta_description:
         default: ''
         description: ''
-        name: '記事用 meta description'
+        name: 'Meta description for an entry'
         obj_type: entry
         options: ~
         required: '0'
@@ -38,7 +41,7 @@ elements:
       item_link:
         default: ''
         description: ''
-        name: 詳細ページへのリンク
+        name: Detail page URL
         obj_type: image
         options: ~
         required: '0'
@@ -46,8 +49,8 @@ elements:
         type: text
       page_icon:
         default: ''
-        description: "font awesome のクラス名を入力して下さい。（例：fa-adjust）\r\nクラス名がわからない場合は、下記チートシートからお探し下さい。\r\nhttp://fortawesome.github.io/Font-Awesome/cheatsheet/"
-        name: アイコンを設定する
+        description: "Enter a class name for icon that provided by Font Awesome. (e.g, fa-adjust) Available class names are listed in below: http://fortawesome.github.io/Font-Awesome/cheatsheet/"
+        name: Class name for a page icon
         obj_type: page
         options: ~
         required: '0'
@@ -56,7 +59,7 @@ elements:
       page_meta_description:
         default: ''
         description: ''
-        name: 'meta description'
+        name: 'Meta description'
         obj_type: template
         options: ~
         required: '0'
@@ -65,7 +68,7 @@ elements:
       webpage_meta_description:
         default: ''
         description: ''
-        name: 'ウェブページ用 meta description'
+        name: 'Meta description for a page'
         obj_type: page
         options: ~
         required: '0'
@@ -80,14 +83,14 @@ elements:
       templates:
         archive:
           category_entry_listing:
-            label: カテゴリ別記事リスト
+            label: Category Entry Listing
             mappings:
               category:
                 archive_type: Category
                 file_template: news/%-c/%i
                 preferred: '1'
           yearly_entry_listing:
-            label: 年別ブログ記事リスト
+            label: Yearly Entry Listing
             mappings:
               yearly:
                 archive_type: Yearly
@@ -99,11 +102,11 @@ elements:
             outfile: common.js
             rebuild_me: '1'
           feed_recent:
-            label: 最新記事のフィード
+            label: Feed - Recent Entries
             outfile: atom.xml
             rebuild_me: '1'
           index_page:
-            label: インデックスページ
+            label: Main Index
             outfile: index.html
             rebuild_me: '1'
           javascript:
@@ -111,16 +114,16 @@ elements:
             outfile: mt.js
             rebuild_me: '1'
           main_index:
-            label: 'ニュース TOP'
+            label: 'News Index'
             outfile: news/index.html
             rebuild_me: '1'
           styles:
-            label: スタイルシート
+            label: Stylesheet
             outfile: styles.css
             rebuild_me: '1'
         individual:
           entry:
-            label: 記事
+            label: Entry
             mappings:
               individual:
                 archive_type: Individual
@@ -147,7 +150,7 @@ elements:
             label: social-button
         page:
           page:
-            label: ウェブページ
+            label: Page
             mappings:
               page:
                 archive_type: Page
@@ -155,17 +158,17 @@ elements:
                 preferred: '1'
         system:
           comment_listing:
-            label: コメント一覧
+            label: Comments
           comment_preview:
-            label: コメントプレビュー
+            label: Comment Preview
           comment_response:
-            label: コメント完了
+            label: Comment Response
           dynamic_error:
-            label: ダイナミックパブリッシングエラー
+            label: Dynamic Error
           popup_image:
-            label: ポップアップ画像
+            label: Popup Image
           search_results:
-            label: 検索結果
+            label: Search Results
     importer: template_set
 id: simplecorporate
 label: 'Simple Corporate'
