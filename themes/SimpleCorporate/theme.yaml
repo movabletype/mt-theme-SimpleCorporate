@@ -1,12 +1,15 @@
----
+id: simplecorporate
+label: 'Simple Corporate'
+name: 'Simple Corporate'
+version: '1.01'
 author_link: 'http://www.movabletype.org/'
 author_name: 'Six Apart, Ltd.'
 class: 'blog'
-description: "'Simple Corporate' is a customizable Responsive Web Design theme, designed for corporate web sites."
+description: <__trans phrase="__DESCRIPTION">
 protected: 1
-#l10n_lexicon:
-#  en_us: l10n_en_us.yaml
-#  ja: l10n_ja.yaml
+l10n_lexicon:
+  en_us: l10n_en_us.yaml
+  ja: l10n_ja.yaml
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thumb-small.png'
@@ -32,7 +35,7 @@ elements:
       entrymeta_description:
         default: ''
         description: ''
-        name: 'Meta description for an entry'
+        name: 'Meta description for this entry'
         obj_type: entry
         options: ~
         required: '0'
@@ -68,7 +71,7 @@ elements:
       webpage_meta_description:
         default: ''
         description: ''
-        name: 'Meta description for a page'
+        name: 'Meta description for this page'
         obj_type: page
         options: ~
         required: '0'
@@ -170,7 +173,3 @@ elements:
           search_results:
             label: Search Results
     importer: template_set
-id: simplecorporate
-label: 'Simple Corporate'
-name: 'Simple Corporate'
-version: '1.01'
