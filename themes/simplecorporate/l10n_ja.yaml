@@ -22,15 +22,9 @@ Archive for [_1]: "[_1] アーカイブ"
 Yearly Entry Listing: "年別ブログ記事リスト"
 common.js: "common.js"
 News Index: "ニュース TOP"
-blog-sidemenu: "blog-sidemenu"
 common_bottom_js: "common_bottom_js"
 common_head_js: "common_head_js"
 common_stylesheet: "common_stylesheet"
-config: "config"
-entry-list: "entry-list"
-footer: "footer"
-header: "header"
-social-button: "social-button"
 Simple Corporate: "Simple Corporate"
 Class name for a page icon: "アイコンを設定する"
 "Enter a class name for icon that provided by Font Awesome. (e.g, fa-adjust) Available class names are listed in below: http://fortawesome.github.io/Font-Awesome/cheatsheet/": "font awesome のクラス名を入力して下さい。（例：fa-adjust）クラス名がわからない場合は、下記チートシートからお探し下さい。http://fortawesome.github.io/Font-Awesome/cheatsheet/"
@@ -39,3 +33,7 @@ Main image: "メイン画像"
 Meta description: "Meta description"
 Meta description for this entry: "記事用 meta description"
 Meta description for this page: "ウェブページ用 meta description"
+Blog Side Nav: サイドメニュー
+Config: テーマ設定
+Entry listing: 記事リスト
+Social Buttons: ソーシャルボタン

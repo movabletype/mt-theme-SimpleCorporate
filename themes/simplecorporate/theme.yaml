@@ -134,7 +134,7 @@ elements:
                 preferred: '1'
         module:
           blog_sidemenu:
-            label: blog-sidemenu
+            label: Blog Side Nav
           common_bottom_js:
             label: common_bottom_js
           common_head_js:
@@ -142,15 +142,15 @@ elements:
           common_stylesheet:
             label: common_stylesheet
           config:
-            label: config
+            label: Config
           entry_list:
-            label: entry-list
+            label: Entry listing
           footer:
-            label: footer
+            label: Footer
           header:
-            label: header
+            label: Header
           social-button:
-            label: social-button
+            label: Social Buttons
         page:
           page:
             label: Page

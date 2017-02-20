@@ -1,4 +1,4 @@
-<mt:include module="config">
+<mt:include module="<__trans phrase="Config">">
 <!DOCTYPE html>
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -23,15 +23,15 @@
 <meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <link itemprop="url" href="<mt:blogurl encode_html="1">">
 <link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
-<mt:include module="common_stylesheet">
-<mt:include module="common_head_js">
+<mt:include module="<__trans phrase="common_stylesheet">">
+<mt:include module="<__trans phrase="common_head_js">">
 </head>
 
 <mt:setvarblock name="thispage">TOP</mt:setvarblock>
 
 <body id="sitetop">
 
-<mt:include module="header">
+<mt:include module="<__trans phrase="Header">">
 
 <section id="mainvisual">
   <div class="container">
@@ -89,9 +89,9 @@
   </div>
 </section>
 
-<mt:include module="footer">
+<mt:include module="<__trans phrase="Footer">">
 
-<mt:include module="common_bottom_js">
+<mt:include module="<__trans phrase="common_bottom_js">">
 <script src="<mt:blogrelativeurl>js/jquery.tile.min.js"></script>
 <script type="application/javascript">
 $(window).load(function(){

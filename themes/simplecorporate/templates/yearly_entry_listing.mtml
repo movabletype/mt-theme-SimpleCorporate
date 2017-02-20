@@ -1,4 +1,4 @@
-<mt:include module="config">
+<mt:include module="<__trans phrase="Config">">
 <!DOCTYPE html>
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -23,15 +23,15 @@
 <meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><__trans phrase="This page is an archive of news in [_1] from [_2]." params="<mt:archivetitle>%%<mt:blogname>"></mt:if>">
 <link itemprop="url" href="<mt:archivelink encode_html="1">">
 <link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
-<mt:include module="common_stylesheet">
-<mt:include module="common_head_js">
+<mt:include module="<__trans phrase="common_stylesheet">">
+<mt:include module="<__trans phrase="common_head_js">">
 </head>
 
 <body id="top">
 
 <mt:setvarblock name="thispage">blog</mt:setvarblock>
 
-<mt:include module="header">
+<mt:include module="<__trans phrase="Header">">
 
 <section id="localnavi">
   <div class="container">
@@ -66,20 +66,20 @@
       <div class="col-sm-9" id="blog-primary-content">
         <h1 class="page-title"><__trans phrase="Archive for [_1]" params="<mt:archivetitle>"></h1>
         <div id="entry-list">
-<mt:include module="entry-list">
+<mt:include module="<__trans phrase="Entry Listing">">
         </div>
         <div class="holder"></div>
       </div><!-- /primary-content -->
       <aside class="col-sm-3 pull-right" id="sidebar">
-<mt:include module="blog-sidemenu">
+<mt:include module="<__trans phrase="Blog Side Nav">">
       </aside><!-- sidebar -->
     </div>
   </div>
 </div>
 
-<mt:include module="footer">
+<mt:include module="<__trans phrase="Footer">">
 
-<mt:include module="common_bottom_js">
+<mt:include module="<__trans phrase="common_bottom_js">">
   
 </body>
 </html>

@@ -1,4 +1,4 @@
-<mt:include module="config">
+<mt:include module="<__trans phrase="Config">">
 <!DOCTYPE html>
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -23,8 +23,8 @@
 <meta itemprop="description" content="<mt:if tag="webpage_meta_description"><mt:webpage_meta_description remove_html="1" encede_html="1"><mt:else><mt:pagebody remove_html="1" encede_html="1" trim_to="120+..."></mt:if>">
 <link itemprop="url" href="<mt:pagepermalink encode_html="1">">
 <link itemprop="image" href="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
-<mt:include module="common_stylesheet">
-<mt:include module="common_head_js">
+<mt:include module="<__trans phrase="common_stylesheet">">
+<mt:include module="<__trans phrase="common_head_js">">
 </head>
 
 <body id="top">
@@ -32,7 +32,7 @@
 <mt:setvarblock name="thisfloder"><mt:PageFolder><mt:FolderLabel></mt:PageFolder></mt:setvarblock>
 <mt:setvarblock name="thispage"><mt:pagetitle></mt:setvarblock>
 
-<mt:include module="header">
+<mt:include module="<__trans phrase="Header">">
 
 <section id="localnavi">
   <div class="container">
@@ -80,9 +80,9 @@
   </article>
 </div>
 
-<mt:include module="footer">
+<mt:include module="<__trans phrase="Footer">">
 
-<mt:include module="common_bottom_js">
+<mt:include module="<__trans phrase="common_bottom_js">">
   
 </body>
 </html>

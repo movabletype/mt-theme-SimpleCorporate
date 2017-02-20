@@ -1,4 +1,4 @@
-<mt:include module="config">
+<mt:include module="<__trans phrase="Config">">
 <!DOCTYPE html>
 <html lang="<mt:bloglanguage>" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -23,15 +23,15 @@
 <meta itemprop="description" content="<mt:if tag="entrymeta_description"><mt:entrymeta_description remove_html="1" encede_html="1"><mt:else><mt:entrybody remove_html="1" encede_html="1" trim_to="120+..."></mt:if>">
 <link itemprop="url" href="<mt:entrypermalink encode_html="1">">
 <link itemprop="image" href="<mt:if tag="entry_img"><mt:entry_imgasset><mt:assetthumbnailurl></mt:entry_imgasset><mt:else><mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets></mt:if>">
-<mt:include module="common_stylesheet">
-<mt:include module="common_head_js">
+<mt:include module="<__trans phrase="common_stylesheet">">
+<mt:include module="<__trans phrase="common_head_js">">
 </head>
 
 <body id="top">
 
 <mt:setvarblock name="thispage">blog</mt:setvarblock>
 
-<mt:include module="header">
+<mt:include module="<__trans phrase="Header">">
 
 <section id="localnavi">
   <div class="container">
@@ -74,19 +74,19 @@
 <mt:entrybody>
 <mt:entrymore>
           </div>
-          <mt:include module="social-button">
+          <mt:include module="<__trans phrase="Social Buttons">">
         </article>
       </div><!-- /primary-content -->
       <aside class="col-sm-3 pull-right" id="sidebar">
-<mt:include module="blog-sidemenu">
+<mt:include module="<__trans phrase="Blog Side Nav">">
       </aside><!-- sidebar -->
     </div>
   </div>
 </div>
 
-<mt:include module="footer">
+<mt:include module="<__trans phrase="Footer">">
 
-<mt:include module="common_bottom_js">
+<mt:include module="<__trans phrase="common_bottom_js">">
   
 </body>
 </html>
