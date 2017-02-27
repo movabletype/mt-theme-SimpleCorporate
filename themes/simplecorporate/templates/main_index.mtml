@@ -19,6 +19,7 @@
 <meta property="og:description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <meta property="og:site_name" content="<mt:blogname encode_html="1">">
 <meta property="og:image" content="<mt:assets type="image" tag="@OG-IMAGE" limit="1"><mt:assetthumbnailurl width="320" encode_html="1"></mt:assets>">
+<mt:if name="fbAppId"><meta property="fb:app_id" content="<mt:var name="fbAppId" escape="html">"></mt:if>
 <!-- Microdata -->
 <meta itemprop="description" content="<mt:if tag="page_meta_description"><mt:page_meta_description remove_html="1" encede_html="1"><mt:else><mt:blogdescription remove_html="1" encede_html="1"></mt:if>">
 <link itemprop="url" href="<mt:blogurl encode_html="1">news/">
