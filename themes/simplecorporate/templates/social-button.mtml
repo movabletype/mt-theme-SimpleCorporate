@@ -28,16 +28,6 @@
       </li>
     </mt:If>
 
-    <mt:If name="socialButtonGoogle">
-      <li class="entry-social-google">
-        <div class="g-plusone"
-          data-size="tall"
-          data-annotation="bubble"
-          data-href="<$mt:EntryPermalink$>">
-        </div>
-      </li>
-    </mt:If>
-
     <mt:If name="socialButtonPocket">
       <li class="entry-social-pocket">
         <a data-pocket-label="pocket"
@@ -98,19 +88,6 @@
       fjs.parentNode.insertBefore(js, fjs);
     }
   }(document, 'script', 'twitter-wjs');
-  </script>
-</mt:If>
-
-<mt:If name="socialButtonGoogle">
-  <script type="text/javascript">
-  (function() {
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(po, s);
-  })();
   </script>
 </mt:If>
 

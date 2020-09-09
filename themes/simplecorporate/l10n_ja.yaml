@@ -6,7 +6,6 @@ You can specify several configuration for a theme.: "各種設定はこのモジ
 Settings for meta keywords.: "全ページ共通 meta keywords"
 Specify the URL of your Facebook page for displaying Facebook icon in all pages.: "Facebookページのurlを設定するとヘッダーにfacebookのアイコンが表示されます"
 Specify the URL of your Twitter account page for displaying Twitter icon in all pages.: "Twitterのurlを設定するとヘッダーにTwitterのアイコンが表示されます"
-Specify the URL of your Google+ account page for displaying Google icon in all pages.: "Google+のurlを設定するとヘッダーにGoogle+のアイコンが表示されます"
 Specify the AppID of Facebook for OGP. Also, specify the twitter account to embed in tweet.: "OGP で利用する Facebook の AppID や、ツイートに含める Twitter のアカウントを記述します。"
 Specify 1 to displaying that social icons in archive page.: "ソーシャルボタン: 表示する場合は 1 を、表示しない場合は 0 を指定してください。"
 '<span class="year">[_1]</span><span class="monthday">[_2]': '<span class="year">[_1]年</span><span class="monthday">[_2]'
