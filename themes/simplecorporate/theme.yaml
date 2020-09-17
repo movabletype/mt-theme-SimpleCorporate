@@ -3,7 +3,7 @@ label: 'Simple Corporate'
 name: 'Simple Corporate'
 version: '1.03'
 author_link: 'http://www.movabletype.org/'
-author_name: 'Six Apart, Ltd.'
+author_name: 'Six Apart Ltd.'
 class: 'blog'
 description: <__trans phrase="__DESCRIPTION">
 protected: 1
